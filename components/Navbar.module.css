@@ -1,0 +1,34 @@
+.navbar {
+    width: 200px;
+    height: 100vh;
+    background-color: #83A488;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position:fixed;
+    left:0;
+    top:0;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+   
+  }
+  
+  .link:hover {
+    background-color: #807f7f;
+  }
+  .search{
+    background: transparent;
+    height:32px;
+  }
+  .icon{
+    width:20px;
+    height:20px;
+  }
