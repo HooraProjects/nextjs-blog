@@ -4,20 +4,20 @@ import AsanaPreview from '../components/AsanaPreview';
 import styles from '../styles/Home.module.css';
 
 const Home: React.FC = () => {
-  const [showAsanaPreview, setShowAsanaPreview] = useState(false);
+  const [selectedAsana, setSelectedAsana] = useState(null);
 
-  const handleNavasanaClick = () => {
-    setShowAsanaPreview(true);
+  const handleAsanaClick = (asana) => {
+    setSelectedAsana(asana);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.navbarContainer}>
-        <Navbar onNavasanaClick={handleNavasanaClick} />
+        <Navbar onAsanaClick={handleAsanaClick} />
       </div>
       <div className={styles.contentContainer}>
-        {showAsanaPreview ? (
-          <AsanaPreview />
+        {selectedAsana ? (
+          <AsanaPreview asana={selectedAsana}/>
         ) : (
           <div className={styles.defaultContent}>
             <img src="/assets/images/yoga2.jpg" alt="yoga-pose" />
