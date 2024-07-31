@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './AsanaPreview.module.css';
 import Link from 'next/Link';
+import Difficulty from './Difficulty';
 interface AsanaPreviewProps {
   asana: { id: number; image: string; text: string };
 }
@@ -19,13 +20,7 @@ const AsanaPreview: React.FC<AsanaPreviewProps> = ({ asana }) => {
         <p>Persian Name</p>
         <p>{asana.persianName}</p>
         <p>Difficulty</p>
-        <div className='flex'>
-          <img src='/assets/images/star.png' alt="star" className={styles.star} />
-          <img src='/assets/images/star.png' alt="star" className={styles.star} />
-          <img src='/assets/images/star.png' alt="star" className={styles.star} />
-          <img src='/assets/images/star.png' alt="star" className={styles.star} />
-          <img src='/assets/images/star.png' alt="star" className={styles.star} />
-        </div>
+        <Difficulty/>
       </div>
       <div className="video-responsive">
         <iframe
