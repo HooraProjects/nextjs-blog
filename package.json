@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.23",
+    "axios": "^1.7.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"
