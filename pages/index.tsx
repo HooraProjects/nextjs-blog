@@ -4,12 +4,13 @@ import Navbar from '../components/Navbar';
 import AsanaPreview from '../components/AsanaPreview';
 import styles from '../styles/Home.module.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Asana } from '../components/types'; // Import the Asana type
 
 const Home: React.FC = () => {
-  const [selectedAsana, setSelectedAsana] = useState(null);
+  const [selectedAsana, setSelectedAsana] = useState<Asana | null>(null); // Update state type to Asana or null
   const queryClient = new QueryClient();
 
-  const handleAsanaClick = (asana: any) => {
+  const handleAsanaClick = (asana: Asana) => { // Use Asana type here
     setSelectedAsana(asana);
   };
 
@@ -36,6 +37,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-
-

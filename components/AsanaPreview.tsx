@@ -10,6 +10,7 @@ interface AsanaPreviewProps {
     video: string;
     sanskritName: string;
     persianName: string;
+    englishName:string;
     icon:string;
   };
 }
@@ -23,16 +24,16 @@ interface AsanaPreviewProps {
     <div className='flex'>
       <div>
         <img src={asana.icon} className={styles.icon} alt={asana.text} />
-        {asana.text}
+        {asana.sanskritName}
         <img src="/assets/images/heart.png" alt="heart" className={styles.heart} />
       </div>
       <div className='flex flex-col'>
         <p >English Name</p>
-        <p>{asana.sanskritName}</p>
+        <p>{asana.englishName}</p>
         <p>Persian Name</p>
         <p>{asana.persianName}</p>
         <p>Difficulty</p>
-        <Difficulty level={asana.difficulty} />
+        <Difficulty level={asana.difficulty}/>
       </div>
       <div className="video-responsive">
         <iframe
