@@ -18,8 +18,10 @@ interface AsanaPreviewProps {
 
   const AsanaPreview: React.FC<AsanaPreviewProps> = ({ asana }) => {
     // Ensure the video URL is in the correct format
-    const videoUrl =
-       `https://www.youtube.com/embed/${asana.video}`;
+    const videoUrl = asana.video;
+const id = videoUrl.split('v=')[1].split('&')[0];
+
+
   return (
     <div className='flex'>
       <div>
@@ -39,7 +41,7 @@ interface AsanaPreviewProps {
         <iframe
           width="560"
           height="315"
-          src={videoUrl}
+          src={`https://www.youtube.com/embed/${id}`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"

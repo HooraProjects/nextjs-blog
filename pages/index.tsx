@@ -1,10 +1,9 @@
-// pages/index.tsx
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import AsanaPreview from '../components/AsanaPreview';
 import styles from '../styles/Home.module.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Asana } from '../components/types'; // Import the Asana type
+import { Asana } from '../components/Types'; // Import the Asana type
 
 const Home: React.FC = () => {
   const [selectedAsana, setSelectedAsana] = useState<Asana | null>(null); // Update state type to Asana or null

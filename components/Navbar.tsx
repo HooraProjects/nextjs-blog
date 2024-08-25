@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ onAsanaClick }) => {
       </div>
 
       {asanas.map((asana: Asana) => (
-        <Link key={asana.id} href="#" className={styles.link} onClick={(e) => handleAsanaClick(e, asana)}>
+        <Link key={asana.id} href={`/${asana.id}`} className={styles.link} onClick={(e) => handleAsanaClick(e, asana)}>
            
           <img src={asana.icon} className={styles.icon} alt={asana.sanskritName} />
           {asana.sanskritName}
