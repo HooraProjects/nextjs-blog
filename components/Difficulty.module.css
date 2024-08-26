@@ -1,5 +1,10 @@
-.star{
-    width:20px;
-    height: 20px;
-    margin-right: 5px;
-  }
+/* Difficulty.module.css */
+.starsContainer {
+  display: flex;
+}
+
+.star {
+  width: 15px; /* Adjust size as needed */
+  height: 15px; /* Adjust size as needed */
+  margin-right: 5px;
+}
